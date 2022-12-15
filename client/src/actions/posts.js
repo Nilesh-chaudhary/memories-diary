@@ -1,5 +1,5 @@
 import * as api from "../api";
-import posts from "../reducers/posts";
+// import posts from "../reducers/posts";
 
 //Action Creators
 export const getPosts = () => async (dispatch) => {
