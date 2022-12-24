@@ -2,7 +2,7 @@
 - A complete MERN application same as an ALBUM of photos, that allows users to post interesting events that happened in their lives with the options of editing and deleting memories. 
 <br>
 <hr>
-deployed link : https://memories-albumm.netlify.app/
+<li> deployed link : https://memories-albumm.netlify.app/
 <li> frontend is deployed on Netlify and backend on vercel.
 <hr>
 <br>
@@ -19,4 +19,5 @@ So, I thought 💡 of creating a similar service, which can be used by others to
 4. Option to make memory private or public based on user choice.
 5. Feature to search memories based on Tags.
 6. Upgrading from **#7DaysOfCode** to **#100DaysOfCode**🚀.
-7. Integrating **AI/ML** 🤖 to send Notifaction based on tags to the user for certain good events after anniversery of the memory.
+7. implement feature so that it can directly suggest tags based on image.
+8. Integrating **AI/ML** 🤖 to send Notifaction based on tags to the user for certain good events after anniversery of the memory.
