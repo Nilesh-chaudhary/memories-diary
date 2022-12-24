@@ -1,9 +1,10 @@
 ﻿# Memories-diary
 - A complete MERN application same as an ALBUM of photos, that allows users to post interesting events that happened in their lives with the options of editing and deleting memories. 
 <br>
+<hr>
 deployed link : https://memories-albumm.netlify.app/
-
-
+<li> frontend is deployed on Netlify and backend on vercel.
+<hr>
 <br>
 
 ## **🔥 Motivation**:
