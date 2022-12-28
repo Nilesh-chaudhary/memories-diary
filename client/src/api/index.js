@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const url = "http://localhost:5000/posts";
+// "https://backend-6wpt-95klxtlm5-nileshother123-gmailcom.vercel.app/posts";
 
 export const fetchPosts = () => axios.get(url);
 export const createPost = (newPost) => axios.post(url, newPost);
