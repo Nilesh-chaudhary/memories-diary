@@ -6,7 +6,7 @@
 <li> frontend is deployed on Netlify and backend on vercel.
 <hr>
 <br>
-![image](https://user-images.githubusercontent.com/83772913/210053422-072d6b8c-25eb-4221-8e73-e63aa9ae7b1f.png)
+<img src="https://user-images.githubusercontent.com/83772913/210053422-072d6b8c-25eb-4221-8e73-e63aa9ae7b1f.png"/>
 ![image](https://user-images.githubusercontent.com/83772913/210053634-3842d20f-d09d-4065-a723-5e20b6f68e55.png)
 
 
