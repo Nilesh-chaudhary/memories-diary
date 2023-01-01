@@ -88,6 +88,8 @@ const Form = ({ currentId, setCurrentId }) => {
               setPostData({ ...postData, selectedFile: base64 })
             }
           />
+          <br />
+          <br />
           <Button
             className={classes.buttonSubmit}
             variant="contained"

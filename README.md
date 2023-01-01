@@ -7,6 +7,7 @@
 <hr>
 <br>
 
+
 ## **🔥 Motivation**:
 From the start of this year 2022, I was thinking of creating a project for myself and can also be used by others for themselves, so as to gain experience and more learning I thought of creating a web app like a digitial album.  
 There happens many events on one's lives but we tend to forget about it soon and lost it. So this webapp helps the user to upload the memories with photos directly to the server and can see it later when required. I tried to find a similar service which can do the same woork as above but not found anything. Social media is one thing aside but we cannot upload our small achievements on socials everytime. Another thing is that we can made it availaible in Mobiles gallery but to find things will be difficult sometimes. 
