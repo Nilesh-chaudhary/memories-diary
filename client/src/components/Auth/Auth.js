@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import {
   Avatar,
@@ -10,6 +10,7 @@ import {
 } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
 import { GoogleLogin } from "react-google-login";
+import { gapi } from "gapi-script";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 
 import Icon from "./icon";
@@ -30,7 +31,7 @@ const SignUp = () => {
   const [form, setForm] = useState(initialState);
   const [isSignup, setIsSignup] = useState(false);
   const dispatch = useDispatch();
-  const history = useNavigate();
+  const navigate = useNavigate();
   const classes = useStyles();
 
   const [showPassword, setShowPassword] = useState(false);
@@ -48,9 +49,9 @@ const SignUp = () => {
     e.preventDefault();
 
     if (isSignup) {
-      dispatch(signup(form, history));
+      dispatch(signup(form, navigate));
     } else {
-      dispatch(signin(form, history));
+      dispatch(signin(form, navigate));
     }
   };
 
@@ -61,17 +62,29 @@ const SignUp = () => {
     try {
       dispatch({ type: "AUTH", data: { result, token } });
 
-      history.push("/");
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
   };
 
-  const googleError = () =>
-    alert("Google Sign In was unsuccessful. Try again later");
+  const googleError = (err) => console.log(err);
+  // alert("Google Sign In was unsuccessful. Try again later");
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
+
+  const clientId =
+    "829719560197-jrmpu98b49d830asvsuqo5gr2424i3an.apps.googleusercontent.com";
+  useEffect(() => {
+    const initClient = () => {
+      gapi.client.init({
+        clientId: clientId,
+        scope: "",
+      });
+    };
+    gapi.load("client:auth2", initClient);
+  });
 
   return (
     <Container component="main" maxWidth="xs">
@@ -151,7 +164,7 @@ const SignUp = () => {
             onFailure={googleError}
             cookiePolicy="single_host_origin"
           />
-          <Grid container justify="flex-end">
+          <Grid container justifyContent="flex-end">
             <Grid item>
               <Button onClick={switchMode}>
                 {isSignup
